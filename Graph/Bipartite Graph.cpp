@@ -57,3 +57,47 @@ public:
         return true;
     }
 };
+
+
+// using DFS 
+
+class Solution
+{
+private:
+    bool dfs(int node, int c, vector<int> adj[], vector<int>& color)
+    {
+        color[node] = c;
+
+        for (int neighbor : adj[node])
+        {
+            if (color[neighbor] == -1)
+            {
+                if (!dfs(neighbor, 1 - c, adj, color))
+                    return false;
+            }
+            else if (color[neighbor] == color[node])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+public:
+    bool isBipartite(int V, vector<int> adj[])
+    {
+        vector<int> color(V, -1);
+
+        for (int i = 0; i < V; ++i)
+        {
+            if (color[i] == -1)
+            {
+                if (!dfs(i, 0, adj, color))
+                    return false;
+            }
+        }
+
+        return true;
+    }
+};
