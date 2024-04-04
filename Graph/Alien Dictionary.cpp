@@ -2,7 +2,7 @@
 using namespace std ;
 
 string findOrder(string dict[], int N, int K) {
-       vector<int>gr[K];
+        vector<int>gr[K];
     for(int i=0;i<N-1;i++){
         int n = dict[i].size();
         int m = dict[i+1].size();
