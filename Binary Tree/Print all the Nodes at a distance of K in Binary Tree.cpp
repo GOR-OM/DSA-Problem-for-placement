@@ -47,7 +47,7 @@ vector<BinaryTreeNode<int>*> printNodesAtDistanceK(BinaryTreeNode<int>* root, Bi
     unordered_map<BinaryTreeNode<int>*,BinaryTreeNode<int>*>parents;
     findPar(parents,root);
 
-    // DFS 
+    // BFS 
     queue<BinaryTreeNode<int>*>q;
     unordered_map<BinaryTreeNode<int>*,bool>check;
     q.push(target);
