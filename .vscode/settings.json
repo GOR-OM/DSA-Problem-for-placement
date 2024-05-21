@@ -13,6 +13,8 @@
         "unordered_set": "cpp",
         "initializer_list": "cpp",
         "regex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "functional": "cpp",
+        "iostream": "cpp"
     }
 }
