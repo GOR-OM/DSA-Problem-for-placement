@@ -1,0 +1,1 @@
+{"name":"Local: Subarray sum equal to k","url":"d:\\Code\\DSA\\DSA-Problem-for-placement\\DP\\Subarray sum equal to k.cpp","tests":[{"id":1716563662338,"input":"1\n3 \n1 1 1\n2","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\DSA\\DSA-Problem-for-placement\\DP\\Subarray sum equal to k.cpp","group":"local","local":true}
