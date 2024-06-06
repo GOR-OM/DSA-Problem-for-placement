@@ -65,7 +65,7 @@ typedef long double ld;
 // const long double pi=3.14159265358979323846264338327950288419716939937510582097494459230;
 
 
-bool config(pair<pair<int,int>,int> a1, pair<pair<int,int>,int> a2){
+static bool config(pair<pair<int,int>,int> a1, pair<pair<int,int>,int> a2){
     if(a1.first.second==a2.first.second)return a1.first.first > a2.first.first ;
     return a1.first.second< a2.first.second ; 
 }
