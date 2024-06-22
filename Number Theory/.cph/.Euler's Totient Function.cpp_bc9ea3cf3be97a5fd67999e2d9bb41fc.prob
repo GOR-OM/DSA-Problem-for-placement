@@ -1,0 +1,1 @@
+{"name":"Local: Euler's Totient Function","url":"d:\\Code\\DSA\\DSA-Problem-for-placement\\Number Theory\\Euler's Totient Function.cpp","tests":[{"id":1719084749451,"input":"2\n9\n8","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\DSA\\DSA-Problem-for-placement\\Number Theory\\Euler's Totient Function.cpp","group":"local","local":true}
