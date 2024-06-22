@@ -1,0 +1,1 @@
+{"name":"Local: splitstring","url":"d:\\Code\\DSA\\DSA-Problem-for-placement\\String\\splitstring.cpp","tests":[{"id":1718438808604,"input":"abc cd kg gg pg om","output":"abc\ncd\nkg\ngg\npg\nom"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\DSA\\DSA-Problem-for-placement\\String\\splitstring.cpp","group":"local","local":true}
