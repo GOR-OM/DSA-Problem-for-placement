@@ -93,6 +93,96 @@ bool wordBreak(string s, vector<string>& wordDict) {
 }
 
 
+/// solve using Trie !
+
+
+struct Node {
+    Node * link[26];
+    bool flag = false;
+
+    void put (char ch , Node* node ){
+        link[ch - 'a']= node;
+    }
+
+    bool checkKey(char ch){
+        return link[ch - 'a']!=NULL;
+    }
+
+    Node * get (char ch ){
+        return link[ch- 'a'];
+    }
+
+    void setEnd(){
+        flag = true;
+    }
+
+    bool isEnd(){
+        return flag;
+    }
+
+};
+
+class Trie {
+    private : 
+    Node * root ;
+
+    public :
+
+    Trie(){
+        Node* root = new Node ();
+    }
+
+    bool solve1(vector<string>& wordDict,string s){
+        Node * root = new Node() ;
+        for(string s : wordDict){
+            Node* curr = root ;
+            for(char ch : s){
+                if(!curr->checkKey(ch)){
+                    curr->put(ch,new Node());
+                }
+                curr = curr->get(ch);
+            }
+            curr->setEnd();
+        }
+
+        vector<int>dp(s.size(),-1);
+        for(int i=0;i<s.size();i++){
+            if(i-1==-1 || dp[i-1]==1){
+                Node* curr = root ;
+                for(int j=i;j<s.size();j++){
+                    char ch = s[j];
+                    if(curr->link[ch-'a']==NULL)break;
+                    curr = curr->get(ch);
+                    if(curr->isEnd())dp[j]=1;
+
+                }
+            }
+        }
+        return dp[s.size()-1]==1;
+
+    }
+
+
+};
+
+
+ bool wordBreak(string s, vector<string>& wordDict) {
+    Trie trie;
+    return trie.solve1(wordDict, s);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
