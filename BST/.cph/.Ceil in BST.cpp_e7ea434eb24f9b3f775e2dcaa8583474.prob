@@ -1,0 +1,1 @@
+{"name":"Local: Ceil in BST","url":"d:\\Code\\DSA\\DSA-Problem-for-placement\\BST\\Ceil in BST.cpp","tests":[{"id":1719860294838,"input":"1\n6 12\n1 3 5 7 10 11","output":"10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\DSA\\DSA-Problem-for-placement\\BST\\Ceil in BST.cpp","group":"local","local":true}
