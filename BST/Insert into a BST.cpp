@@ -84,6 +84,32 @@ TreeNode* insertIntoBST(TreeNode* root, int val) {
     return root;
 }
 
+TreeNode* insertIntoBST(TreeNode* root, int val) {
+    if (root == NULL) {
+        return new TreeNode(val);
+    }
+    
+    TreeNode* current = root;
+    while (true) {
+        if (val < current->val) {
+            if (current->left == NULL) {
+                current->left = new TreeNode(val);
+                break;
+            } else {
+                current = current->left;
+            }
+        } else {
+            if (current->right == NULL) {
+                current->right = new TreeNode(val);
+                break;
+            } else {
+                current = current->right;
+            }
+        }
+    }
+    return root;
+}
+
 
 
 int main()
