@@ -1,0 +1,1 @@
+{"name":"Local: Floor using BST","url":"d:\\Code\\DSA\\DSA-Problem-for-placement\\BST\\Floor using BST.cpp","tests":[{"id":1719861327589,"input":"1\n6 7\n1 3 5 7 10","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\DSA\\DSA-Problem-for-placement\\BST\\Floor using BST.cpp","group":"local","local":true}
