@@ -1,0 +1,1 @@
+{"name":"Local: search in BST","url":"d:\\Code\\DSA\\DSA-Problem-for-placement\\BST\\search in BST.cpp","tests":[{"id":1719859651617,"input":"1\n6 5\n6 1 3 5 8 9","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\DSA\\DSA-Problem-for-placement\\BST\\search in BST.cpp","group":"local","local":true}

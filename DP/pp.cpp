@@ -66,64 +66,46 @@ const long double pi=3.141592653589793238462643383279502884197169399375105820974
 
 
 
-struct Node{
-    int data;
-    Node* left;
-    Node* right;
-    Node(int val) : data(val), left(NULL), right(NULL) {}
-};
+vector<int> findPatterns(const string& s) {
+    vector<int> result;
+    int n = s.length();
+    
+    for (int i = 0; i < n; ) {
+        int start = i;
+        bool found = false;
 
+        while (i + 2 < n && (s.substr(i, 3) == "ABA" || s.substr(i, 3) == "BAB")) {
+            found = true;
+            i += 2;
+        }
 
-//Search in BST
-
-
-class Tree{
-
-    public : 
-    Node* sortedArrayToBST(vector<int>& arr, int start, int end) {
-    if (start > end) {
-        return NULL;
+        if (found) {
+            result.push_back(i - start + 1);
+            i++; // Move to the next character after the current sequence
+        } else {
+            i++;
+        }
     }
-    int mid = start + (end - start) / 2;
-    Node* node = new Node(arr[mid]);
-    node->left = sortedArrayToBST(arr, start, mid - 1);
-    node->right = sortedArrayToBST(arr, mid + 1, end);
-    return node;
+    
+    return result;
 }
 
 
-    Node* search(Node* root, int key){
-    if(root == NULL || root->data==key){
-        return root;
-    }
-    if(root->data < key){
-        return search(root->right, key);
-    }
-    return search(root->left, key);
-}
-};
 
 
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        int n,k;
-        cin>>n>>k;
-        vector<int>arr(n);
-        for(int i=0;i<n;i++){
-            cin>>arr[i];
-        }
-        Tree tree;
-        SORT(arr);
-        Node* root = tree.sortedArrayToBST(arr,0,n-1);
-        Node* node =tree.search(root ,k);
-        cout<<node->data<<endl;
-
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    string match = "AB";
+    vector<int>cnt = findPatterns(s);
+    long long ans =1;
+    for(int i=0;i<cnt.size();i++){
+        ans = (ans * (cnt[i]+1)/2 )%MOD;
     }
+    cout<<ans;
+    
 }
